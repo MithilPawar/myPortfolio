@@ -1,0 +1,40 @@
+/* Base styling for the theme toggle button */
+.theme_toggler {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: var(--primary-color);
+    z-index: 999999999;
+    display: flex;
+    height: 60px;              /* Increased button size */
+    width: 60px;               /* Increased button size */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;        /* Circular shape */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and zoom effect */
+}
+
+/* Icon inside the toggle button */
+.theme_toggler svg {
+    width: 3em;                /* Increased icon size */
+    height: 3em;               /* Increased icon size */
+}
+
+/* Hover effect on the theme toggle button */
+.theme_toggler:hover {
+    background: #444; /* Change the background color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Adjustments for dark mode */
+[data-theme="dark"] {
+    --primary-color: #333; /* Dark background color */
+    color: #fff;           /* Default text color for dark mode */
+}
+
+/* Adjustments for light mode */
+[data-theme="light"] {
+    --primary-color: #f5f5f5; /* Light background color */
+    color: #000;               /* Default text color for light mode */
+}
